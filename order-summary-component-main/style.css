@@ -1,0 +1,200 @@
+/*##########################################
+                # General Styling
+#############################*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2;
+
+  background-color: hsl(225, 100%, 94%);
+  /* display: grid; */
+}
+
+/*##########################################
+                # Main Styling
+#############################*/
+.order-summary {
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  min-height: 98vh;
+
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.order-summary-card {
+  width: 50%;
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 18px;
+  box-shadow: 0 1rem 1.8rem rgba(0, 0, 0, 0.1);
+  padding-bottom: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.order-summary-img {
+  width: 100%;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.order-summary-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1rem 2.4rem 0 2.4rem;
+}
+
+.order-summary-heading {
+  color: hsl(223, 47%, 23%);
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+.paragraph {
+  color: hsl(224, 23%, 55%);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.pricing-plan {
+  padding: 1.8rem 2.4rem;
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+
+.pricing-plan div:first-child {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.pricing-plan-text {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+.pricing-plan-num {
+  color: hsl(224, 23%, 55%);
+  font-weight: 600;
+  margin-top: 0.6rem;
+}
+
+.pricing-plan-link:link,
+.pricing-plan-link:visited {
+  display: inline-block;
+  transition: all 0.3s;
+  font-weight: 700;
+}
+
+.pricing-plan-link:hover,
+.pricing-plan-link:active {
+  text-decoration: none;
+}
+
+.proceed-pay:link,
+.proceed-pay:visited,
+.cancel-pay:link,
+.cancel-pay:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.proceed-pay:link,
+.proceed-pay:visited {
+  background-color: hsl(245, 75%, 52%);
+  box-shadow: 0 1.6rem 3.2rem rgba(0, 0, 0, 0.2);
+  color: hsl(225, 100%, 98%);
+  padding: 1.6rem 8rem;
+  border-radius: 11px;
+  transition: all 0.3s;
+}
+
+.proceed-pay:hover,
+.proceed-pay:active {
+  background-color: hsl(223, 73%, 58%);
+}
+
+.cancel-pay:link,
+.cancel-pay:visited {
+  color: hsl(224, 23%, 55%);
+  transition: all 0.3s;
+}
+
+.cancel-pay:hover,
+.cancel-pay:active {
+  color: hsl(223, 47%, 23%);
+}
+/*##########################################
+                # Footer Styling
+#############################*/
+.attribution {
+  align-self: end;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*##########################################
+                # Media Queries
+#############################*/
+/* (Below: 700px) */
+@media (max-width: 43.75em) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .order-summary-card {
+    width: 65%;
+  }
+}
+
+/* (Below: 600px) */
+@media (max-width: 37.5em) {
+  .container {
+    padding: 0 8rem;
+    margin: 3.2rem 0;
+  }
+
+  .order-summary-card {
+    width: 100%;
+  }
+}
+
+/* (Below: 500px) */
+@media (max-width: 31.25em) {
+  .container {
+    padding: 0 1.8rem;
+  }
+
+  .pricing-plan {
+    /* padding: 1.8rem 2rem; */
+    gap: 4rem;
+  }
+}
